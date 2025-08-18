@@ -26,9 +26,13 @@ import alertLine from '../assets/alert-line.svg'
                     allowfullscreen></iframe>
             </div>
             <div class="jumbotron-content">
-                <h1 class="jumbotron-title">Welcome to Aeon Desktop</h1>
+                <h1 class="jumbotron-title">
+                    Aeon is the Linux desktop to <strong>get stuff done.</strong
+                    >
+                </h1>
                 <p class="jumbotron-text">
-                    The Linux Desktop for people who want to "get stuff done"
+                    Combined with a modern, elegant design, Aeon keeps your OS
+                    secure and up to date so you can focus on what's important.
                 </p>
                 <a
                     class="jumbotron-button"
@@ -46,3 +50,111 @@ import alertLine from '../assets/alert-line.svg'
         </div>
     </div>
 </section>
+
+<style>
+    .section-jumbotron {
+        background-image: linear-gradient(
+            to bottom,
+            var(--primary-color),
+            var(--primary-darker-color)
+        );
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+    }
+
+    .jumbotron-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: 768px) {
+        .jumbotron-container {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    .jumbotron-image-wrapper {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .jumbotron-image-wrapper {
+            width: 50%;
+            margin-bottom: 0;
+            margin-left: 2rem;
+        }
+    }
+
+    .jumbotron-image {
+        border-radius: 1.2rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .jumbotron-content {
+        width: 100%;
+        color: #e9f6ef;
+    }
+    @media (min-width: 768px) {
+        .jumbotron-content {
+            width: 50%;
+        }
+    }
+
+    .jumbotron-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 400;
+        color: #fbfefd;
+        margin-bottom: 1rem;
+    }
+
+    .jumbotron-title strong {
+        font-weight: 700;
+        /* color: #40fd8f; */
+    }
+
+    @media (min-width: 640px) {
+        .jumbotron-title {
+            font-size: 3rem;
+            line-height: 1;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .jumbotron-title {
+            font-size: 3.75rem;
+            line-height: 1;
+        }
+    }
+
+    .jumbotron-text {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+    }
+
+    .jumbotron-button {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+        font-size: 1.2rem;
+        transition: all var(--transition-duration) ease;
+        text-decoration: none;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
+
+    .jumbotron-button:hover {
+        transform: scale(1.2);
+        background-color: #00e3af;
+        color: black;
+    }
+</style>
