@@ -5,6 +5,7 @@ import { YouTube } from '@astro-community/astro-embed-youtube'
 
 import alertLine from '../assets/alert-line.svg'
 import HeroButton from './HeroButton.astro'
+import Punchline from './Punchline'
 ---
 
 <section class="section-jumbotron">
@@ -24,10 +25,7 @@ import HeroButton from './HeroButton.astro'
                 />
             </div>
             <div class="jumbotron-content">
-                <h1 class="jumbotron-title">
-                    Aeon is the Linux desktop to <strong>get stuff done.</strong
-                    >
-                </h1>
+                <Punchline client:idle />
                 <p class="jumbotron-text">
                     Combined with a modern, elegant design, Aeon keeps your OS
                     secure and up-to-date so you can focus on what's important.
@@ -98,34 +96,6 @@ import HeroButton from './HeroButton.astro'
     @media (min-width: 925px) {
         .jumbotron-content {
             width: 50%;
-        }
-    }
-
-    .jumbotron-title {
-        font-size: 3.25rem;
-        line-height: 3.5rem;
-        font-weight: 400;
-        color: #fbfefd;
-        margin-bottom: 1rem;
-        max-width: 600px;
-    }
-
-    .jumbotron-title strong {
-        font-weight: 700;
-        /* color: #40fd8f; */
-    }
-
-    @media (min-width: 640px) {
-        .jumbotron-title {
-            font-size: 3rem;
-            line-height: 1;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .jumbotron-title {
-            font-size: 3.75rem;
-            line-height: 1;
         }
     }
 

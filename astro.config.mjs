@@ -1,9 +1,12 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config'
 
+import solidJs from '@astrojs/solid-js';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aeondesktop.github.io',
+
   experimental: {
     fonts: [
       {
@@ -19,5 +22,7 @@ export default defineConfig({
         weights: [400, 700]
       }
     ]
-  }
+  },
+
+  integrations: [solidJs()]
 })
