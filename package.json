@@ -7,6 +7,7 @@
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier --write .",
+    "preinstall": "npx only-allow pnpm",
     "preview": "astro preview"
   },
   "dependencies": {

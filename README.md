@@ -1,14 +1,14 @@
-# Astro Starter Kit: Basics
+# Aeon Website
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+This repository is for the website at [aeondesktop.github.io](https://aeondesktop.github.io).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Developing
+
+This website is made with Astro, a static site generator. To start developing, first install [pnpm](https://pnpm.io/installation).
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of this repository, you'll see the following folders and files:
 
 ```text
 /
@@ -16,17 +16,19 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src
 │   ├── assets
-│   │   └── astro.svg
+│   │   └── { images }
 │   ├── components
-│   │   └── Welcome.astro
+│   │   └── { reusable pieces of content }
 │   ├── layouts
 │   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── pages
+│   │   └── index.astro
+│   └── styles
+│       └── global.css
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+To learn more about the folder structure of an Astro project, refer to [Astro's guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
 ## 🧞 Commands
 
@@ -40,7 +42,3 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm preview`         | Preview your build locally, before deploying     |
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
