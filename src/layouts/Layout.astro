@@ -1,9 +1,9 @@
 ---
-import { Font, Image } from 'astro:assets'
+import { Font } from 'astro:assets'
 
 import '../styles/global.css'
 
-import logo from '../assets/light-inline.svg'
+import AeonLogo from '../assets/logo-inline.svg'
 ---
 
 <!doctype html>
@@ -20,14 +20,8 @@ import logo from '../assets/light-inline.svg'
     <body>
         <header class="header">
             <div class="container header-container">
-                <a href="#" class="header-logo">
-                    <Image
-                        class="logo"
-                        src={logo}
-                        alt="Aeon logo"
-                        width={150}
-                        height={40}
-                    />
+                <a href="/" class="header-logo">
+                    <AeonLogo class="logo" />
                 </a>
                 <nav class="nav">
                     <ul>
@@ -48,3 +42,10 @@ import logo from '../assets/light-inline.svg'
         </footer>
     </body>
 </html>
+
+<style>
+    .logo {
+        fill: var(--text-color);
+        transition: all var(--transition-duration) ease;
+    }
+</style>
