@@ -1,0 +1,39 @@
+---
+interface Props {
+    type: 'primary' | 'secondary'
+    href: string
+}
+
+const { type, href }: Props = Astro.props
+---
+
+<a class:list={['jumbotron-button', type]} target="_blank" href={href}>
+    <slot />
+</a>
+<style>
+    .jumbotron-button {
+        display: inline-block;
+        color: white;
+        padding: 1rem 2rem;
+
+        /* This is a little hacky but it keeps the buttons left aligned */
+        margin-right: 1rem;
+
+        border-radius: 3rem;
+        font-size: 1.2rem;
+        transition: all var(--transition-duration) ease;
+        text-decoration: none;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+    }
+    .jumbotron-button:hover {
+        background-color: #00e3af;
+        color: var(--text-color-dark);
+    }
+    .primary {
+        background-color: var(--primary-button-color);
+    }
+    .secondary {
+        background-color: var(--secondary-button-color);
+    }
+</style>
