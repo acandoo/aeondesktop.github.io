@@ -2,6 +2,7 @@
   --primary-color: oklab(66% -0.13 0.03);
   --primary-darker-color: oklab(50% -0.1 0.02);
   --text-color: #1a2421;
+  --text-color-light: #e2e6e4;
   --heading-color: #1a2421;
   --primary-body: #fbfefd;
   --secondary-body: #e9f6ef;
@@ -14,8 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #fbfefd;
-    --heading-color: #fbfefd;
+    --text-color: #e2e6e4;
+    --heading-color: #fdfdfd;
     --primary-body: #1a2421;
     --secondary-body: #3a4340;
     --shadow-color: 0 4px 6px -1px #fbfefd20, 0 2px 4px -1px #fbfefd10;
