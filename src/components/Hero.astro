@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets'
+
+import alertLine from '../assets/alert-line.svg'
+---
+
+<section class="section-jumbotron">
+    <div class="container">
+        <div class="warning-container">
+            <div class="warning" role="alert">
+                <Image src={alertLine} alt="Alert" />
+                <span>Aeon is still in a Release Candidate stage!</span>
+            </div>
+        </div>
+        <div class="jumbotron-container">
+            <div class="jumbotron-image-wrapper">
+                <iframe
+                    class="jumbotron-image"
+                    width="600"
+                    height="360"
+                    src="https://www.youtube.com/embed/1K_kGbmlewo"
+                    title="openSUSE Aeon - Desktop Linux Finally Done Right? Video on YouTube"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="jumbotron-content">
+                <h1 class="jumbotron-title">Welcome to Aeon Desktop</h1>
+                <p class="jumbotron-text">
+                    The Linux Desktop for people who want to "get stuff done"
+                </p>
+                <a
+                    class="jumbotron-button"
+                    target="_blank"
+                    href="https://download.opensuse.org/tumbleweed/appliances/Aeon-Installer.x86_64.raw.xz"
+                    >Download</a
+                >
+                <a
+                    class="jumbotron-button"
+                    target="_blank"
+                    href="https://en.opensuse.org/Portal:Aeon/InstallGuide"
+                    >Install Guide</a
+                >
+            </div>
+        </div>
+    </div>
+</section>

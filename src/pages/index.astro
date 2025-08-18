@@ -1,7 +1,4 @@
 ---
-import { Image } from 'astro:assets'
-
-import alertLine from '../assets/alert-line.svg'
 import distroboxIcon from '../assets/distrobox.svg'
 import flatpakIcon from '../assets/flatpak.svg'
 import fullscreenExitLine from '../assets/fullscreen-exit-line.svg'
@@ -12,187 +9,85 @@ import refreshLine from '../assets/refresh-line.svg'
 import telegramLine from '../assets/telegram-line.svg'
 import toolsLine from '../assets/tools-line.svg'
 import userCommunityLine from '../assets/user-community-line.svg'
+import CommunityLink from '../components/CommunityLink.astro'
+import FeatureCard from '../components/FeatureCard.astro'
+import Hero from '../components/Hero.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
     <div id="content">
-        <section class="section-jumbotron">
-            <div class="container">
-                <div class="warning-container">
-                    <div class="warning" role="alert">
-                        <Image src={alertLine} alt="Alert" />
-                        <span>Aeon is still in a Release Candidate stage!</span>
-                    </div>
-                </div>
-                <div class="jumbotron-container">
-                    <div class="jumbotron-image-wrapper">
-                        <iframe
-                            class="jumbotron-image"
-                            width="600"
-                            height="360"
-                            src="https://www.youtube.com/embed/1K_kGbmlewo"
-                            title="openSUSE Aeon - Desktop Linux Finally Done Right? Video on YouTube"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="jumbotron-content">
-                        <h1 class="jumbotron-title">Welcome to Aeon Desktop</h1>
-                        <p class="jumbotron-text">
-                            The Linux Desktop for people who want to "get stuff
-                            done"
-                        </p>
-                        <a
-                            class="jumbotron-button"
-                            target="_blank"
-                            href="https://download.opensuse.org/tumbleweed/appliances/Aeon-Installer.x86_64.raw.xz"
-                            >Download</a
-                        >
-                        <a
-                            class="jumbotron-button"
-                            target="_blank"
-                            href="https://en.opensuse.org/Portal:Aeon/InstallGuide"
-                            >Install Guide</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <Hero />
         <section id="features" class="section-features">
             <div class="container">
                 <h2 class="features-title">Features</h2>
                 <div class="features-grid">
-                    <div class="feature-card">
-                        <h3 class="feature-title">
-                            <div class="feature-icon">
-                                <Image
-                                    class="flip"
-                                    src={toolsLine}
-                                    alt="Tools icon"
-                                    width={32}
-                                    height={32}
-                                />
-                            </div>
-                            Automated Maintenance
-                        </h3>
-                        <p class="feature-text">
-                            Daily system updates happen automatically while you
-                            work. Your running system is not affected until you
-                            reboot, keeping your workday consistent and avoiding
-                            any unexpected issues with your apps.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <h3 class="feature-title">
-                            <div class="feature-icon">
-                                <Image
-                                    class="flip"
-                                    src={fullscreenExitLine}
-                                    alt="Fullscreen icon"
-                                    width={32}
-                                    height={32}
-                                />
-                            </div>
-                            Minimal Yet Functional
-                        </h3>
-                        <p class="feature-text">
-                            The base system is kept small and simple, but with
-                            everything you need for getting straight on with
-                            your tasks - including programming, gaming, media
-                            production and clerical work.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <h3 class="feature-title">
-                            <div class="feature-icon">
-                                <Image
-                                    class="flip"
-                                    src={distroboxIcon}
-                                    alt="Distrobox icon"
-                                    width={32}
-                                    height={32}
-                                />
-                            </div>
-                            Distrobox
-                        </h3>
-                        <p class="feature-text">
-                            Aeon ships with <a
-                                href="https://distrobox.it/"
-                                target="_blank">Distrobox</a
-                            > configured to launch Tumbleweed containers, perfect
-                            for your development tools and projects in their own
-                            little containerized environments.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <h3 class="feature-title">
-                            <div class="feature-icon">
-                                <Image
-                                    class="flip"
-                                    src={flatpakIcon}
-                                    alt="Flatpak icon"
-                                    width={32}
-                                    height={32}
-                                />
-                            </div>
-                            Flatpak
-                        </h3>
-                        <p class="feature-text">
-                            <a href="https://flatpak.org/" target="_blank"
-                                >Flatpak</a
-                            > is already set up to let you install any app from a
-                            vast catalogue available from
-                            <a href="https://flathub.org/" target="_blank"
-                                >Flathub</a
-                            >. Just click install and go.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <h3 class="feature-title">
-                            <div class="feature-icon">
-                                <Image
-                                    class="flip"
-                                    src={refreshLine}
-                                    alt="Refresh icon"
-                                    width={32}
-                                    height={32}
-                                />
-                            </div>
-                            Transactional Update
-                        </h3>
-                        <p class="feature-text">
-                            The same base technologies powering MicroOS are
-                            here, to ensure long and steady operation of your
-                            computer and its software.
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <h3 class="feature-title">
-                            <div class="feature-icon">
-                                <Image
-                                    class="flip"
-                                    src={userCommunityLine}
-                                    alt="Community icon"
-                                    width={32}
-                                    height={32}
-                                />
-                            </div>
-                            Community
-                        </h3>
-                        <p class="feature-text">
-                            Large, knowledgable community gives you an
-                            opportunity to learn, troubleshoot and make full use
-                            of your new operating system with help of other
-                            people.
-                        </p>
-                    </div>
+                    <FeatureCard
+                        title="Automated Maintenance"
+                        icon={toolsLine}
+                        iconAlt="Tools icon"
+                    >
+                        Daily system updates happen automatically while you
+                        work. Your running system is not affected until you
+                        reboot, keeping your workday consistent and avoiding any
+                        unexpected issues with your apps.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Minimal Yet Functional"
+                        icon={fullscreenExitLine}
+                        iconAlt="Fullscreen icon"
+                    >
+                        The base system is kept small and simple, but with
+                        everything you need for getting straight on with your
+                        tasks - including programming, gaming, media production
+                        and clerical work.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Distrobox"
+                        icon={distroboxIcon}
+                        iconAlt="Distrobox icon"
+                    >
+                        Aeon ships with <a
+                            href="https://distrobox.it/"
+                            target="_blank">Distrobox</a
+                        > configured to launch Tumbleweed containers, perfect for
+                        your development tools and projects in their own little containerized
+                        environments.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Flatpak"
+                        icon={flatpakIcon}
+                        iconAlt="Flatpak icon"
+                    >
+                        <a href="https://flatpak.org/" target="_blank"
+                            >Flatpak</a
+                        > is already set up to let you install any app from a vast
+                        catalogue available from <a
+                            href="https://flathub.org/"
+                            target="_blank">Flathub</a
+                        >. Just click install and go.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Transactional Update"
+                        icon={refreshLine}
+                        iconAlt="Refresh icon"
+                    >
+                        The same base technologies powering MicroOS are here, to
+                        ensure long and steady operation of your computer and
+                        its software.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Community"
+                        icon={userCommunityLine}
+                        iconAlt="Community icon"
+                    >
+                        Large, knowledgable community gives you an opportunity
+                        to learn, troubleshoot and make full use of your new
+                        operating system with help of other people.
+                    </FeatureCard>
                 </div>
             </div>
         </section>
-
         <section id="who-is-aeon-for" class="section-who-is-for">
             <div class="container">
                 <h2 class="who-is-for-title">Who is Aeon For?</h2>
@@ -253,62 +148,26 @@ import Layout from '../layouts/Layout.astro'
                     wait to meet you!
                 </p>
                 <div class="community-links">
-                    <a
+                    <CommunityLink
                         href="https://github.com/AeonDesktop/"
-                        target="_blank"
-                        class="community-link"
+                        image={githubLine}
+                        imageAlt="GitHub icon">GitHub</CommunityLink
                     >
-                        <Image
-                            class="flip"
-                            src={githubLine}
-                            alt="GitHub icon"
-                            width={32}
-                            height={32}
-                        />
-                        GitHub
-                    </a>
-                    <a
+                    <CommunityLink
                         href="https://t.me/AeonDesktop"
-                        target="_blank"
-                        class="community-link"
+                        image={telegramLine}
+                        imageAlt="Telegram icon">Telegram</CommunityLink
                     >
-                        <Image
-                            class="flip"
-                            src={telegramLine}
-                            alt="Telegram icon"
-                            width={32}
-                            height={32}
-                        />
-                        Telegram
-                    </a>
-                    <a
+                    <CommunityLink
                         href="https://matrix.to/#/#aeon:opensuse.org"
-                        target="_blank"
-                        class="community-link"
+                        image={matrixLine}
+                        imageAlt="Matrix icon">Matrix</CommunityLink
                     >
-                        <Image
-                            class="flip"
-                            src={matrixLine}
-                            alt="Matrix icon"
-                            width={32}
-                            height={32}
-                        />
-                        Matrix
-                    </a>
-                    <a
+                    <CommunityLink
                         href="https://www.reddit.com/r/AeonDesktop/"
-                        target="_blank"
-                        class="community-link"
+                        image={redditLine}
+                        imageAlt="Reddit icon">Reddit</CommunityLink
                     >
-                        <Image
-                            class="flip"
-                            src={redditLine}
-                            alt="GitHub icon"
-                            width={32}
-                            height={32}
-                        />
-                        Reddit
-                    </a>
                 </div>
             </div>
         </section>
