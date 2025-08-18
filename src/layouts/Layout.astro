@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets'
+
+import '../styles/global.css'
+
+import logo from '../assets/logo.svg'
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Aeon</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header-container">
+                <a href="#" class="header-logo">
+                    <Image class="logo" src={logo} alt="Aeon logo" />
+                    Aeon Desktop
+                </a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#who-is-aeon-for">Who is Aeon For?</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <slot />
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <p>© {new Date().getFullYear()} Aeon Contributors</p>
+            </div>
+        </footer>
+    </body>
+</html>

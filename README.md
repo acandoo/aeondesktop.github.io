@@ -1,37 +1,46 @@
-# Aeon Website
+# Astro Starter Kit: Basics
 
-Repo for the website at [aeondesktop.github.io](https://aeondesktop.github.io)
-
-## Developing
-
-This website is made with [Pelican](https://getpelican.com/), you will need to install this to serve and regenerate the site.
-
-You will also need `make`, which should be in your distribution's repos.
-
-### Running Locally
-
-To serve and watch for changes, run this command in a terminal:
-```
-make watch
-```
-This will watch for changes to any of the files and re-compile the website for testing.
-
-### Editing the Site
-Currently the site is just one page, which lives at `themes/aeon/templates/index.html`. Edit this file to change the markup for the site. Do **NOT** edit the HTML in the `docs` folder, as this will be overwritten when the site is built.
-
-The CSS lives at `themes/aeon/static/css/main.css`. Feel free to put any other files alongside `main.css` if it makes things tidier (make sure to include them in `index.html` above).
-
-### Building the Site
-Once you are happy with your changes, execute the `create-pages.sh` script to build the site for deployment:
-
-```
-make pages
+```sh
+pnpm create astro@latest -- --template basics
 ```
 
-#### Committing
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-Please ensure your changes are on a new branch on your forked repo.
+## 🚀 Project Structure
 
-Open a Pull Request to this repository, requesting to merge your branch into the `main` branch of this repo.
+Inside of your Astro project, you'll see the following folders and files:
 
-Ensure that you have added your changes to the `themes` folder, the `output` folder, and the `docs` folder. 
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
+
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `pnpm install`         | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
