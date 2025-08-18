@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets'
 
+import { YouTube } from '@astro-community/astro-embed-youtube'
+
 import alertLine from '../assets/alert-line.svg'
 ---
 
@@ -14,16 +16,11 @@ import alertLine from '../assets/alert-line.svg'
         </div>
         <div class="jumbotron-container">
             <div class="jumbotron-image-wrapper">
-                <iframe
+                <YouTube
+                    id="1K_kGbmlewo"
+                    title="openSUSE Aeon - Desktop Linux Finally Done Right?"
                     class="jumbotron-image"
-                    width="600"
-                    height="360"
-                    src="https://www.youtube.com/embed/1K_kGbmlewo"
-                    title="openSUSE Aeon - Desktop Linux Finally Done Right? Video on YouTube"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+                />
             </div>
             <div class="jumbotron-content">
                 <h1 class="jumbotron-title">
@@ -68,7 +65,7 @@ import alertLine from '../assets/alert-line.svg'
         align-items: center;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 925px) {
         .jumbotron-container {
             flex-direction: row-reverse;
             align-items: flex-start;
@@ -81,7 +78,7 @@ import alertLine from '../assets/alert-line.svg'
         width: 100%;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 925px) {
         .jumbotron-image-wrapper {
             width: 50%;
             margin-bottom: 0;
@@ -99,15 +96,15 @@ import alertLine from '../assets/alert-line.svg'
         width: 100%;
         color: #e9f6ef;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 925px) {
         .jumbotron-content {
             width: 50%;
         }
     }
 
     .jumbotron-title {
-        font-size: 5.7rem;
-        line-height: 2.5rem;
+        font-size: 3.25rem;
+        line-height: 3.5rem;
         font-weight: 400;
         color: #fbfefd;
         margin-bottom: 1rem;
