@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config'
 
-import solidJs from '@astrojs/solid-js';
+import solidJs from '@astrojs/solid-js'
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +20,18 @@ export default defineConfig({
         name: 'Inter',
         cssVariable: '--font-inter',
         weights: [400, 700]
+      },
+      {
+        provider: 'local',
+        name: 'Adwaita Sans',
+        cssVariable: '--font-adwaita-sans',
+        variants: [
+          {
+            weight: '400 700',
+            style: 'normal',
+            src: ['./src/assets/AdwaitaSans-Regular.woff2']
+          }
+        ]
       }
     ]
   },
