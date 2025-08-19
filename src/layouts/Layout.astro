@@ -4,6 +4,7 @@ import { Font } from 'astro:assets'
 import '../styles/global.css'
 
 import AeonLogo from '../assets/logo-inline.svg'
+import NavigationBar from '../components/NavigationBar.tsx'
 ---
 
 <!doctype html>
@@ -19,22 +20,9 @@ import AeonLogo from '../assets/logo-inline.svg'
         <Font cssVariable="--font-adwaita-sans" preload />
     </head>
     <body>
-        <header class="header">
-            <div class="container header-container">
-                <a href="/" class="header-logo" aria-label="Aeon logo">
-                    <AeonLogo class="logo" />
-                </a>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="/#features">Features</a></li>
-                        <li>
-                            <a href="/#who-is-aeon-for">Who is Aeon For?</a>
-                        </li>
-                        <li><a href="/#community">Community</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <NavigationBar client:idle>
+            <AeonLogo class="logo" height="2.75rem" />
+        </NavigationBar>
         <main>
             <slot />
         </main>
