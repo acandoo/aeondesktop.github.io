@@ -1,7 +1,8 @@
 :root {
-  --primary-color: oklab(66% -0.13 0.03);
+  --primary-color: oklab(76% -0.13 0.03);
+  --primary-medium-color: oklab(66% -0.13 0.03);
   --primary-darker-color: oklab(50% -0.1 0.02);
-  --primary-button-color: oklab(66% -0.13 0.03);
+  --primary-button-color: var(--primary-color);
   --secondary-button-color: oklab(34% -0.05 -0.02);
   --text-color: #1a2421;
   --text-color-light: #edefed;
