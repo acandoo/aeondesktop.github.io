@@ -10,14 +10,22 @@ import NavigationBar from '../components/NavigationBar.tsx'
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aeon — the Linux workstation that doesn’t compromise.</title>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Aeon</title>
+
         <Font cssVariable="--font-source-sans" preload />
         <Font cssVariable="--font-inter" preload />
         <Font cssVariable="--font-adwaita-sans" preload />
+        {/* For YouTube embed */}
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
+
+        <meta name="generator" content={Astro.generator} />
+        <meta
+            name="description"
+            content="With cutting‐edge software, fearless updates, and top‐notch security, Aeon is the Linux OS that works hard so you can focus on what’s important."
+        />
     </head>
     <body>
         <NavigationBar client:idle>
