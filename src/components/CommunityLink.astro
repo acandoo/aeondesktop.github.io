@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+    href: string
+    image: ImageMetadata
+    imageAlt: string
+}
+const { href, image, imageAlt }: Props = Astro.props
+---
+
+<a href={href} target="_blank" class="community-link">
+    <Image class="flip" src={image} alt={imageAlt} width={32} height={32} />
+    <slot />
+</a>

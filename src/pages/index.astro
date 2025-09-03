@@ -1,0 +1,178 @@
+---
+import distroboxIcon from '../assets/distrobox.svg'
+import flatpakIcon from '../assets/flatpak.svg'
+import fullscreenExitLine from '../assets/fullscreen-exit-line.svg'
+import githubLine from '../assets/github-line.svg'
+import matrixLine from '../assets/matrix-line.svg'
+import redditLine from '../assets/reddit-line.svg'
+import refreshLine from '../assets/refresh-line.svg'
+import telegramLine from '../assets/telegram-line.svg'
+import toolsLine from '../assets/tools-line.svg'
+import userCommunityLine from '../assets/user-community-line.svg'
+import CommunityLink from '../components/CommunityLink.astro'
+import FeatureCard from '../components/FeatureCard.astro'
+import Hero from '../components/Hero.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout>
+    <div id="content">
+        <Hero />
+        <section id="features" class="section-features">
+            <div class="container">
+                <h2 class="features-title">Features</h2>
+                <div class="features-grid">
+                    <FeatureCard
+                        title="Automated Maintenance"
+                        icon={toolsLine}
+                        iconAlt="Tools icon"
+                        loading="eager"
+                    >
+                        Daily system updates happen automatically while you
+                        work. Your running system is not affected until you
+                        reboot, keeping your workday consistent and avoiding any
+                        unexpected issues with your apps.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Minimal Yet Functional"
+                        icon={fullscreenExitLine}
+                        iconAlt="Fullscreen icon"
+                        loading="eager"
+                    >
+                        The base system is kept small and simple, but with
+                        everything you need for getting straight on with your
+                        tasks - including programming, gaming, media production
+                        and clerical work.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Distrobox"
+                        icon={distroboxIcon}
+                        iconAlt="Distrobox icon"
+                        loading="eager"
+                    >
+                        Aeon ships with <a
+                            href="https://distrobox.it/"
+                            target="_blank">Distrobox</a
+                        > configured to launch Tumbleweed containers, perfect for
+                        your development tools and projects in their own little containerized
+                        environments.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Flatpak"
+                        icon={flatpakIcon}
+                        iconAlt="Flatpak icon"
+                    >
+                        <a href="https://flatpak.org/" target="_blank"
+                            >Flatpak</a
+                        > is already set up to let you install any app from a vast
+                        catalogue available from <a
+                            href="https://flathub.org/"
+                            target="_blank">Flathub</a
+                        >. Just click install and go.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Transactional Update"
+                        icon={refreshLine}
+                        iconAlt="Refresh icon"
+                    >
+                        The same base technologies powering MicroOS are here, to
+                        ensure long and steady operation of your computer and
+                        its software.
+                    </FeatureCard>
+                    <FeatureCard
+                        title="Community"
+                        icon={userCommunityLine}
+                        iconAlt="Community icon"
+                    >
+                        Large, knowledgable community gives you an opportunity
+                        to learn, troubleshoot and make full use of your new
+                        operating system with help of other people.
+                    </FeatureCard>
+                </div>
+            </div>
+        </section>
+        <section id="who-is-aeon-for" class="section-who-is-for">
+            <div class="container">
+                <h2 class="who-is-for-title">Who is Aeon For?</h2>
+                <div class="who-is-for-grid">
+                    <div class="who-is-for-card">
+                        <h3>Beginners</h3>
+                        <p>
+                            The OS is static, automated and reliable, letting
+                            you focus on your apps and work.
+                        </p>
+                    </div>
+                    <div class="who-is-for-card">
+                        <h3>"Lazy Developer"</h3>
+                        <p>
+                            Spend your time getting things done while letting
+                            your desktop take care of itself.
+                        </p>
+                    </div>
+                    <div class="who-is-for-card">
+                        <h3>Anyone</h3>
+                        <p>If you like a computer that "just works".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="section-community">
+            <div class="container">
+                <h2 class="community-title">Join the Community</h2>
+                <p class="community-text">
+                    The Aeon community is full of passionate, friendly, and
+                    talented individuals working together to build something
+                    amazing. Whether you're here to contribute, learn, or just
+                    hang out, you're always welcome!
+                </p>
+                <p class="community-text">
+                    Looking for technical details and how-tos? Check out the <a
+                        target="_blank"
+                        href="https://en.opensuse.org/Portal:Aeon">Aeon Wiki</a
+                    > for in-depth guides and documentation.
+                </p>
+                <p class="community-text">
+                    Have a bug to report? We appreciate your help in making Aeon
+                    even better! Head over to <a
+                        target="_blank"
+                        href="https://bugzilla.opensuse.org/enter_bug.cgi?product=openSUSE+Aeon&format=guided"
+                        >Bugzilla</a
+                    > and follow our <a
+                        target="_blank"
+                        href="https://en.opensuse.org/openSUSE:Submitting_bug_reports"
+                        >Submitting Bug Reports</a
+                    > guide to ensure your report is detailed and helpful.
+                </p>
+                <p class="community-text">
+                    Got questions or just want to chat? Join one of our chat
+                    rooms, where you’ll find helpful folks ready to discuss the
+                    project, share ideas, and collaborate in real time. We can’t
+                    wait to meet you!
+                </p>
+                <div class="community-links">
+                    <CommunityLink
+                        href="https://github.com/AeonDesktop/"
+                        image={githubLine}
+                        imageAlt="GitHub icon">GitHub</CommunityLink
+                    >
+                    <CommunityLink
+                        href="https://t.me/AeonDesktop"
+                        image={telegramLine}
+                        imageAlt="Telegram icon">Telegram</CommunityLink
+                    >
+                    <CommunityLink
+                        href="https://matrix.to/#/#aeon:opensuse.org"
+                        image={matrixLine}
+                        imageAlt="Matrix icon">Matrix</CommunityLink
+                    >
+                    <CommunityLink
+                        href="https://www.reddit.com/r/AeonDesktop/"
+                        image={redditLine}
+                        imageAlt="Reddit icon">Reddit</CommunityLink
+                    >
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>

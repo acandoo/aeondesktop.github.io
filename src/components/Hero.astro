@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets'
+
+import { YouTube } from '@astro-community/astro-embed-youtube'
+
+import alertLine from '../assets/alert-line.svg'
+import HeroButton from './HeroButton.astro'
+import Punchline from './Punchline'
+---
+
+<section class="section-jumbotron">
+    <div class="container">
+        <div class="warning-container">
+            <div class="warning" role="alert">
+                <Image src={alertLine} alt="Alert" loading="eager" />
+                <span>Aeon is still in a Release Candidate stage!</span>
+            </div>
+        </div>
+        <div class="jumbotron-container">
+            <div class="jumbotron-image-wrapper">
+                <YouTube
+                    id="1K_kGbmlewo"
+                    title="openSUSE Aeon - Desktop Linux Finally Done Right?"
+                    poster={/* Currently, this component only supports one image at a time. It
+                    may be possible to use @supports (background-image: url(...)) in the component,
+                    but I'm not sure how that could be syntactically implemented upstream. */
+                    'https://i.ytimg.com/vi_webp/1K_kGbmlewo/sddefault.webp'}
+                    class="jumbotron-image"
+                />
+            </div>
+            <div class="jumbotron-content">
+                <Punchline client:idle />
+                <p class="jumbotron-text">
+                    Combined with a modern, elegant design, Aeon keeps your OS
+                    secure and up-to-date so you can focus on what's important.
+                </p>
+                <HeroButton
+                    type="primary"
+                    href="https://download.opensuse.org/tumbleweed/appliances/Aeon-Installer.x86_64.raw.xz"
+                    >Download</HeroButton
+                >
+                <HeroButton
+                    type="secondary"
+                    href="https://en.opensuse.org/Portal:Aeon/InstallGuide"
+                    >Install Guide</HeroButton
+                >
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .section-jumbotron {
+        background-image: linear-gradient(
+            to bottom,
+            var(--primary-medium-color),
+            var(--primary-darker-color)
+        );
+        padding-top: 7.75rem; /* 3 rem + navigation bar (4.75rem) */
+        padding-bottom: 6rem;
+    }
+
+    .jumbotron-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: 925px) {
+        .jumbotron-container {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    .jumbotron-image-wrapper {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    @media (min-width: 925px) {
+        .jumbotron-image-wrapper {
+            width: 50%;
+            margin-bottom: 0;
+            margin-left: 2rem;
+        }
+    }
+
+    .jumbotron-image {
+        border-radius: 1.2rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .jumbotron-content {
+        width: 100%;
+        color: #e9f6ef;
+    }
+    @media (min-width: 925px) {
+        .jumbotron-content {
+            width: 50%;
+        }
+    }
+
+    .jumbotron-text {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        color: var(--text-color-light);
+        margin-bottom: 2rem;
+        max-width: 600px;
+    }
+</style>

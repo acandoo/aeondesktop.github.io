@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+    title: string
+    icon: ImageMetadata
+    iconAlt: string
+    loading?: 'eager' | 'lazy'
+}
+const { title, icon, iconAlt, loading }: Props = Astro.props
+---
+
+<div class="feature-card">
+    <h3 class="feature-title">
+        <div class="feature-icon">
+            <Image
+                class="flip"
+                src={icon}
+                alt={iconAlt}
+                width={32}
+                height={32}
+                loading={loading}
+            />
+        </div>
+        {title}
+    </h3>
+    <p class="feature-text"><slot /></p>
+</div>
